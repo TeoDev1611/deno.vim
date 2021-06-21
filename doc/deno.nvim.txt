@@ -1,6 +1,81 @@
-______                   _   _ _           
-|  _  \                 | | | (_)          
-| | | |___ _ __   ___   | | | |_ _ __ ___  
-| | | / _ \ '_ \ / _ \  | | | | | '_ ` _ \ 
-| |/ /  __/ | | | (_) | \ \_/ / | | | | | |
-|___/ \___|_| |_|\___/   \___/|_|_| |_| |_|
+	      ______                   _   _ _           
+	      |  _  \                 | | | (_)          
+	      | | | |___ _ __   ___   | | | |_ _ __ ___  
+	      | | | / _ \ '_ \ / _ \  | | | | | '_ ` _ \ 
+	      | |/ /  __/ | | | (_) | \ \_/ / | | | | | |
+	      |___/ \___|_| |_|\___/   \___/|_|_| |_| |_|
+
+====================================================================
+CONTENTS                                            *PotionContents*
+
+    1. Usage ................ |DenoVimUsage|
+    2. License .............. |DenoVimLicense|
+    3. Bugs ................. |DenoVimBugs|
+    4. Contributing ......... |DenoVimContributing|
+    5. Credits .............. |DenoVimCredits|
+
+====================================================================
+Section 1: Usage                                       *DenoVimUsage*
+
+The Deno Vim plugin is a tools for a best usage for Deno Vim Lover
+
+Section 1.1: Deno Fmt
+
+The **DenoFmt** Command format the files in the current directory.
+If you want customize the command use:
+
+````
+let g:deno_fmt = 'deno fmt ' (DEFAULT)
+````
+Section 1.2: Deno Cache
+
+The **DenoCache** command cache the dependencies for the current file.
+If you want customize the command use:
+
+````
+let g:deno_cache = 'deno cache ' (DEFAULT)
+````
+
+Section 1.3: Deno Run
+
+The **DenoRun** command run the current file with deno.
+If you want customize use:
+
+````
+let g:deno_run = 'deno run -A' (DEFAULT) 
+````
+
+Section 1.4: Deno Doc
+
+The **DenoDoc** command run the doc command ask you the file.
+If you want customize use:
+
+````
+let g:deno_doc='deno doc --json ' (DEFAULT)
+````
+
+====================================================================
+Section 2: License                                  *DenoVimLicense*
+
+The plugin have the MIT License check the LICENSE file for more information
+
+====================================================================
+Section 3: Bugs                                       *DenoVimBugs*
+
+If you find any bug report the bug in the github repo: github.com/TeoDev1611/deno.vim
+
+====================================================================
+Section 4: Contributing                        *DenoVimContributing*
+
+For contribute check the issues with the label bug or feature request
+if that isnt resolved you can make a pull request mentioning the issue
+or describing the feature.
+
+====================================================================
+Section 5: Credits                             *DenoVimContributing*
+
+Original project by: Teo | TeoDev1611 in github 
+
+---
+
+If you make a contribution feel free to add here and the github

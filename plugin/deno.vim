@@ -21,32 +21,39 @@ endif
 function DenoFmt()
   execute "!" . g:deno_fmt
   echo "Succesfuly formated with: " . g:deno_fmt
-  echomsg "Fmt runned at" . s:current_time . "with: " . g:deno_fmt "path: " . s:path
+  echomsg "Fmt runned at " . s:current_time . "with: " . g:deno_fmt "path: " . s:path
 endfunction
 
 " Cache runner
 function DenoCache()
   execute "!". g:deno_cache . s:path	
   echo "Cached succesfuly with: " . g:deno_cache
-  echomsg "Cache runned at" . s:current_time . "with: " . g:deno_cache "path: " . s:path
+  echomsg "Cache runned at " . s:current_time . "with: " . g:deno_cache "path: " . s:path
 endfunction
 
 " Run current file
 function DenoRun()
   execute "!". g:deno_run . s:path
   echo "Script runned succesfuly with: " . g:deno_run
-  echomsg "Script runned at" . s:current_time . "with: " . g:deno_run "path: " . s:path
+  echomsg "Script runned at " . s:current_time . "with: " . g:deno_run "path: " . s:path
 endfunction
 
 " Deno Doc arg
-function DenoDoc(file)
-  execute "!". g:deno_doc . file
-  echo "Documentation runned with: ". g:deno_doc
-  echomsg "Script runned at" . s:current_time . "with: " . g:deno_doc "path: " . s:path
+function DenoDoc()
+  let s:inputUser = input("Name of the module or the file?: ")
+  if empty(s:inputUser)
+    echoerr "The input is required"
+    echomsg "Command Runned at " . s:current_time . "with: " . g:deno_doc
+    finish
+  else
+    execute "!". g:deno_doc . s:inputUser
+    echo "Documentation runned with: ". g:deno_doc
+    echomsg "Script runned at " . s:current_time . "with: " . g:deno_doc "path: " . s:path
+  endif
 endfunction
 
 " Register the commands 
 command! -nargs=0 DenoFmt call DenoFmt()
 command! -nargs=0 DenoCache call DenoCache()
 command! -nargs=0 DenoRun call DenoRun()
-command! -nargs=1 DenoDoc call DenoDoc(<args>)
+command! -nargs=0 DenoDoc call DenoDoc()
